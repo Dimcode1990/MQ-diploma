@@ -274,7 +274,44 @@
                 </div>
                 <form class="search">
                   <input class="search__field" name="query" placeholder="Найти...">
-                  <button class="search__button" type="button"></button>
+                  <label for="popup-1" class="btn"></label>
+                  <input type="checkbox" class="popup__toggle" id="popup-1">
+                  <div class="popup">
+                    <div class="popup__content">
+                      <label for="popup-1" class="popup__close">&times</label>
+                      <h2 class="popup-title">
+                        ваш фидбэк
+                      </h2>
+                      <label class="select-group">
+                        <span class="form-hint">Как часто вы заходите на сайт?</span>
+                        <select class="select">
+                          <option value="day" selected="">Почти каждый день</option>
+                          <option value="month">Каждый месяц</option>
+                          <option value="never">Впервые вижу</option>
+                        </select>
+                      </label>
+                      <section class="form-row">
+                        <span class="form-hint">Вы подписаны на нашу e-mail рассылку?</span>
+                        <label class="radio-group">
+                          <input type="radio" class="radio" name="radio-group" checked>
+                          <span class="radio-group-text">Да</span>
+                        </label>
+                        <label class="radio-group">
+                          <input type="radio" class="radio" name="radio-group">
+                          <span class="radio-group-text">Нет</span>
+                        </label>
+                      </section>
+                      <label class="feedback">
+                        <div class="form__name">
+                          <span class="form-hint">Введите ваше сообщение</span>
+                          <textarea class="field" placeholder="Может, больше рецептов"></textarea>
+                        </div>
+                      </label>
+                      <button type="button" class="feedback-button">
+                        Отправить
+                      </button>
+                    </div>
+                  </div>
                 </form>
               </section>
               <section class="mailing">
