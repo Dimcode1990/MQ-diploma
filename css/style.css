@@ -17,7 +17,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-display: swap;
   font-family: OpenSans-Bold, Arial, Helvetica, sans-serif;
 }
 
@@ -33,6 +32,7 @@ a {
 .header {
   text-transform: uppercase;
   position: relative;
+  padding-top: 29px;
   padding-bottom: 146px;
   background-color: black;
   color: white;
@@ -74,7 +74,7 @@ a {
   padding: 0px 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 29px;
+  /* margin-top: 29px; */
 }
 
 .header__title {
@@ -122,13 +122,16 @@ a:hover {
 
 .trend {
   position: relative;
-  height: 320px;
+  min-height: 320px;
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 16px;
+  padding: 16px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: end;
 }
 
 .trend::before {
@@ -147,40 +150,22 @@ a:hover {
 }
 
 .trend-garden {
-  position: relative;
-  background-image: url("images/trend1.jpg");
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  align-items: end;
+  background-image: url("../img/trend1.jpg");
 }
 
 .trend-cheese {
-  background-image: url("images/trend2.jpg");
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  align-items: end;
+  position: relative;
+  background-image: url("../img/trend2.jpg");
 }
 
 .trend-hicking {
-  background-image: url("images/trend3.jpg");
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  align-items: end;
+  position: relative;
+  background-image: url("../img/trend3.jpg");
 }
 
 .trend-lemon {
-  background-image: url("images/trend4.jpg");
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  align-items: end;
+  position: relative;
+  background-image: url("../img/trend4.jpg");
 }
 
 .trend__text {
@@ -191,6 +176,7 @@ a:hover {
   padding-top: 42px;
   padding-bottom: 35px;
   padding-left: 36px;
+  padding-right: 36px;
   text-transform: uppercase;
 }
 
@@ -224,6 +210,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .post:first-child {
@@ -242,6 +229,10 @@ a:hover {
   font-weight: 700;
   font-size: 14px;
   margin-right: 20px;
+}
+
+.post__cathegory-item:last-child {
+  margin: 0;
 }
 
 .post__cathegory-item:hover {
@@ -450,7 +441,7 @@ a:hover {
   height: 48px;
   border: none;
   background-color: #b59f5b;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-image: url("../svg/search.svg");
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center;
@@ -478,7 +469,7 @@ a:hover {
   color: #333333;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("images/form-arrows.svg");
+  background-image: url("../svg/form-arrows.svg");
   background-repeat: no-repeat;
   background-size: 10px 20px;
   background-position: right 5px center;
@@ -493,7 +484,6 @@ a:hover {
 .form-row {
   display: block;
   box-sizing: border-box;
-  /* width: 400px; */
 }
 
 .radio-group-text::before {
@@ -502,7 +492,7 @@ a:hover {
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  background-image: url("images/form-empty-circle.svg");
+  background-image: url("../svg/form-empty-circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 20px;
@@ -518,7 +508,7 @@ a:hover {
 }
 
 .radio:checked + .radio-group-text::before {
-  background-image: url("images/form-circle.svg");
+  background-image: url("../svg/form-circle.svg");
 }
 
 .radio {
@@ -536,20 +526,27 @@ a:hover {
   padding: 10px;
 }
 
-.feedback-button {
-  display: block;
-  margin-top: 18px;
-  width: 100%;
-  height: 48px;
-  box-sizing: border-box;
-  border: none;
+.button {
   background-color: #b59f5b;
   text-transform: uppercase;
+  box-sizing: border-box;
+  border: none;
   text-align: center;
   color: #ffffff;
   cursor: pointer;
   font-weight: 700;
   font-size: 14px;
+  height: 48px;
+}
+
+.feedback-button {
+  display: block;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.mailing-hint_hidden {
+  display: none;
 }
 
 .mailing__field {
@@ -569,16 +566,6 @@ a:hover {
   display: block;
   margin-top: 18px;
   width: 100%;
-  height: 48px;
-  box-sizing: border-box;
-  border: none;
-  background-color: #b59f5b;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 14px;
 }
 
 .tag__holder {
@@ -592,7 +579,6 @@ a:hover {
 
 .tag__holder-item {
   box-sizing: border-box;
-  height: 30px;
   border: 2px solid #eeeeee;
   padding: 6px 13px 10px 13px;
   font-weight: 700;
@@ -633,7 +619,7 @@ a:hover {
 .links {
   box-sizing: border-box;
   width: 1170px;
-  height: 83px;
+  padding: 20px;
   background-color: #f4f7f6;
   display: flex;
   flex-direction: row;
@@ -646,7 +632,31 @@ a:hover {
 
 .social_logo {
   width: 20px;
-  height: auto;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+.dribble {
+  background-image: url(../svg/001-dribbble.svg);
+}
+
+.pinterest {
+  background-image: url(../svg/002-pinterest.svg);
+}
+
+.tumblr {
+  background-image: url(../svg/003-tumblr.svg);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .rights {
@@ -672,31 +682,13 @@ a:hover {
 
 .good-item {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .good-item_image {
-  height: 200px;
-}
-
-.image-cushion {
-  background-image: url("images/shop-item-desk1.jpg");
-  background-color: darkgrey;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.image-rabbit {
-  background-image: url("images/shop-item-desk2.jpg");
-  background-color: darkgrey;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.image-frame {
-  background-image: url("images/shop-item-desk3.jpg");
-  background-color: darkgrey;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: darkgray;
 }
 
 .good-item_content {
@@ -750,3 +742,4 @@ a:hover {
   color: white;
   background-color: #b59f5b;
 }
+

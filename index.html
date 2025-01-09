@@ -107,7 +107,6 @@
                     <li class="post__cathegory-item"><a href="#">health</a></li>
                   </ul>
                   <h3 class="post__title">
-                    <a href="#"></a>
                     <a href="#">10 мест, ради которых стоит проснуться на рассвете</a>
                   </h3>
                   <div class="post__athribute">
@@ -307,7 +306,7 @@
                           <textarea class="field" placeholder="Может, больше рецептов"></textarea>
                         </div>
                       </label>
-                      <button type="button" class="feedback-button">
+                      <button type="button" class="button feedback-button">
                         Отправить
                       </button>
                     </div>
@@ -318,9 +317,12 @@
                 <h2 class="side__bar-title">
                   рассылка
                 </h2>
-                <form class="mailin__group">
-                  <input type="email" class="mailing__field" placeholder="Ваш email-адрес">
-                  <button class="mailing__button" type="submit">подписаться</button>
+                <form class="mailing__group">
+                  <label class="mailing-hint">
+                    <span class="mailing-hint_hidden">Ваш email-адрес</span>
+                    <input type="email" class="mailing__field" placeholder="Ваш email-адрес">
+                  </label>
+                  <button class="button mailing__button" type="submit">подписаться</button>
                 </form>
               </section>
               <section class="tags">
@@ -378,7 +380,7 @@
             </h2>
             <section class="goods-bar">
               <article class="good-item">
-                <div class="good-item_image image-cushion"></div>
+                <img class="good-item_image" src="img/shop-item-desk1.jpg" alt="cushion">
                 <div class="good-item_content">
                   <h3 class="good-item__title">
                     подушки на диван
@@ -395,12 +397,12 @@
                         800 р
                       </p>
                     </div>
-                    <button class="good-item__button">В магазин</button>
+                    <button class="button good-item__button">В магазин</button>
                   </div>
                 </div>
               </article>
               <article class="good-item">
-                <div class="good-item_image image-rabbit"></div>
+                <img class="good-item_image" src="img/shop-item-desk2.jpg" alt="rabbit">
                 <div class="good-item_content">
                   <h3 class="good-item__title">
                     Кукла "Зайчик"
@@ -417,12 +419,12 @@
                         3500 р
                       </p>
                     </div>
-                    <button class="good-item__button">В магазин</button>
+                    <button class="button good-item__button">В магазин</button>
                   </div>
                 </div>
               </article>
               <article class="good-item">
-                <div class="good-item_image image-frame"></div>
+                <img class="good-item_image" src="img/shop-item-desk3.jpg" alt="frame">
                 <div class="good-item_content">
                   <h3 class="good-item__title">
                     шестиугольная рамка
@@ -439,24 +441,36 @@
                         400 р
                       </p>
                     </div>
-                    <button class="good-item__button">В магазин</button>
+                    <button class="button good-item__button">В магазин</button>
                   </div>
                 </div>
               </article>
             </section>
           </aside>
           <footer class="footer">
-            <div class="links">
-              <a href="#">
-                <img src="https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg" alt="dribble" class="social_logo">
-              </a>
-              <a href="#">
-                <img src="https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg" alt="pinterest" class="social_logo">
-              </a>
-              <a href="#">
-                <img src="https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg" alt="tumblr" class="social_logo">
-              </a>
-            </div>
+            <ul class="links">
+              <li class="link-item">
+                <a href="#">
+                  <div class="social_logo dribble">
+                    <p class="visually-hidden">Dribble</p>
+                  </div>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="#">
+                  <div class="social_logo pinterest">
+                    <p class="visually-hidden">Pinterest</p>
+                  </div>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="#">
+                  <div class="social_logo tumblr">
+                    <p class="visually-hidden">Tumblr</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
             <span class="rights">Copyright © 2009–2019 City Blog LLC.</span>
           </footer>
     </body>
