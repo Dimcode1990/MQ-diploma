@@ -272,43 +272,58 @@
                   </div>
                 </div>
                 <form class="search">
-                  <input class="search__field" name="query" placeholder="Найти...">
+                  <label class="label-wraper">
+                    <input class="search__field" name="query" placeholder="Найти...">
+                    <span class="visually-hidden">Найти статью на сайте</span>
+                  </label> 
                   <label for="popup-1" class="btn"></label>
                   <input type="checkbox" class="popup__toggle" id="popup-1">
                   <div class="popup">
                     <div class="popup__content">
-                      <label for="popup-1" class="popup__close">&times</label>
-                      <h2 class="popup-title">
-                        ваш фидбэк
-                      </h2>
-                      <label class="select-group">
-                        <span class="form-hint">Как часто вы заходите на сайт?</span>
-                        <select class="select">
-                          <option value="day" selected="">Почти каждый день</option>
-                          <option value="month">Каждый месяц</option>
-                          <option value="never">Впервые вижу</option>
-                        </select>
-                      </label>
-                      <section class="form-row">
-                        <span class="form-hint">Вы подписаны на нашу e-mail рассылку?</span>
-                        <label class="radio-group">
-                          <input type="radio" class="radio" name="radio-group" checked>
-                          <span class="radio-group-text">Да</span>
+                      <form class="feedback-area">
+                          <label for="popup-1" class="popup__close">
+                            &times
+                            <span class="visually-hidden">Закрыть всплывающее окно</span>
+                          </label>
+                        <h2 class="popup-title">
+                          ваш фидбэк
+                        </h2>
+                        <label class="select-group">
+                          <span class="form-hint">Как часто вы заходите на сайт?</span>
+                          <span class="visually-hidden">Как часто вы заходите на сайт?</span>
+                          <select class="select">
+                            <option value="day" selected="">Почти каждый день</option>
+                            <option value="month">Каждый месяц</option>
+                            <option value="never">Впервые вижу</option>
+                          </select>
                         </label>
-                        <label class="radio-group">
-                          <input type="radio" class="radio" name="radio-group">
-                          <span class="radio-group-text">Нет</span>
+                        <section class="form-row">
+                          <label class="label-wraper">
+                            <span class="form-hint">Вы подписаны на нашу e-mail рассылку?</span>
+                            <span class="visually-hidden">Вы подписаны на нашу рассылку?</span>
+                            <label class="radio-group">
+                              <input type="radio" class="radio" name="radio-group" checked>
+                              <span class="radio-group-text">Да</span>
+                            </label>
+                            <label class="radio-group">
+                              <input type="radio" class="radio" name="radio-group">
+                              <span class="radio-group-text">Нет</span>
+                            </label>
+                          </label>
+                        </section>
+                        <label class="feedback">
+                          <label class="form__name">
+                            <span class="form-hint">Введите ваше сообщение</span>
+                            <span class="visually-hidden">Вы подписаны на нашу рассылку?</span>
+                            <textarea class="field" placeholder="Может, больше рецептов"></textarea>
+                          </label>
                         </label>
-                      </section>
-                      <label class="feedback">
-                        <div class="form__name">
-                          <span class="form-hint">Введите ваше сообщение</span>
-                          <textarea class="field" placeholder="Может, больше рецептов"></textarea>
-                        </div>
-                      </label>
-                      <button type="button" class="button feedback-button">
-                        Отправить
-                      </button>
+                        <button type="button" class="button feedback-button">
+                          Отправить
+                          <span class="visually-hidden">Отправить отзыв
+                          </span>
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </form>
@@ -319,10 +334,15 @@
                 </h2>
                 <form class="mailing__group">
                   <label class="mailing-hint">
-                    <span class="mailing-hint_hidden">Ваш email-адрес</span>
+                    <span class="visually-hidden">Введите ваш адрес электронной почты для подписки
+                    </span>
                     <input type="email" class="mailing__field" placeholder="Ваш email-адрес">
                   </label>
-                  <button class="button mailing__button" type="submit">подписаться</button>
+                  <button class="button mailing__button" type="submit">
+                    подписаться
+                    <span class="visually-hidden">Подписаться на рассылку новостей
+                    </span>
+                  </button>
                 </form>
               </section>
               <section class="tags">
@@ -391,13 +411,17 @@
                   <div class="sale-group">
                     <div class="good-item__price">
                       <p class="price_old">
-                        1000 р
+                        1000 ₽
                       </p>
                       <p class="price-new">
-                        800 р
+                        800 ₽
                       </p>
                     </div>
-                    <button class="button good-item__button">В магазин</button>
+                    <button class="button good-item__button">
+                      В магазин
+                      <span class="visually-hidden">Перейти к покупкам
+                      </span>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -416,10 +440,14 @@
                         
                       </p>
                       <p class="price-new">
-                        3500 р
+                        3500 ₽
                       </p>
                     </div>
-                    <button class="button good-item__button">В магазин</button>
+                    <button class="button good-item__button">
+                      В магазин
+                      <span class="visually-hidden">Перейти к покупкам
+                      </span>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -435,13 +463,17 @@
                   <div class="sale-group">
                     <div class="good-item__price">
                       <p class="price_old">
-                        500 р
+                        500 ₽
                       </p>
                       <p class="price-new">
-                        400 р
+                        400 ₽
                       </p>
                     </div>
-                    <button class="button good-item__button">В магазин</button>
+                    <button class="button good-item__button">
+                      В магазин
+                      <span class="visually-hidden">Перейти к покупкам
+                      </span>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -451,23 +483,23 @@
             <ul class="links">
               <li class="link-item">
                 <a href="#">
-                  <div class="social_logo dribble">
-                    <p class="visually-hidden">Dribble</p>
-                  </div>
+                  <label class="social_logo dribble">
+                    <span class="visually-hidden">Dribble</span>
+                  </label>
                 </a>
               </li>
               <li class="link-item">
                 <a href="#">
-                  <div class="social_logo pinterest">
+                  <label class="social_logo pinterest">
                     <p class="visually-hidden">Pinterest</p>
-                  </div>
+                  </label>
                 </a>
               </li>
               <li class="link-item">
                 <a href="#">
-                  <div class="social_logo tumblr">
+                  <label class="social_logo tumblr">
                     <p class="visually-hidden">Tumblr</p>
-                  </div>
+                  </label>
                 </a>
               </li>
             </ul>

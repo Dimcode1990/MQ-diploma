@@ -392,47 +392,35 @@ a:hover {
 
 .popup__toggle:checked + .popup {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup__close {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
   position: absolute;
-  top: -10px;
+  top: -40px;
   right: -10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-}
-
-.popup__close:hover {
-  width: 30px;
-  height: 30px;
-  top: -15px;
-  right: -15px;
-  border: 2px solid black;
-  font-size: large;
 }
 
 .popup__close:active {
   background-color: black;
   color: #fff;
+  border-radius: 50%;
 }
 
 .popup__content {
   width: 400px;
-  height: 400px;
   border-radius: 10px;
   background-color: #fff;
   padding: 20px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .btn {
@@ -545,10 +533,6 @@ a:hover {
   width: 100%;
 }
 
-.mailing-hint_hidden {
-  display: none;
-}
-
 .mailing__field {
   display: block;
   margin-top: 23px;
@@ -631,9 +615,11 @@ a:hover {
 }
 
 .social_logo {
+  display: block;
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .dribble {
